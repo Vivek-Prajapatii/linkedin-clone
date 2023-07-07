@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Login = (props) => {
   return (
-    <container>
+    <Container>
       <Nav>
         <a href="/">
           <img src="./images/login-logo.svg"></img>
@@ -24,11 +24,11 @@ const Login = (props) => {
           </Google>
         </Form>
       </Section>
-    </container>
+    </Container>
   );
 };
 
-const container = styled.div`
+const Container = styled.div`
   padding: 0px;
 `;
 
