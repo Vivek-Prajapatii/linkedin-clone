@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Login = (props) => {
   return (
-    <contianer>
+    <container>
       <Nav>
         <a href="/">
           <img src="./images/login-logo.svg"></img>
@@ -15,14 +15,20 @@ const Login = (props) => {
       <Section>
         <Hero>
           <h1>Welcome to your professional community</h1>
-          <img src="/images/login-hero.svg" alt='img'/>
+          <img src="/images/login-hero.svg" alt="img" />
         </Hero>
+        <Form>
+          <Google>
+            <img src="/images/google.svg" />
+            Sign in with Google
+          </Google>
+        </Form>
       </Section>
-    </contianer>
+    </container>
   );
 };
 
-const contianer = styled.div`
+const container = styled.div`
   padding: 0px;
 `;
 
@@ -129,7 +135,7 @@ const Hero = styled.div`
     /* left: 20px; */
 
     @media (max-width: 768px) {
-      top:230px;
+      top: 230px;
       width: initial;
       left: 10px;
       position: initial;
@@ -138,6 +144,37 @@ const Hero = styled.div`
   }
 `;
 
+const Form = styled.div`
+  margin-top: 100px;
+  width: 408px;
+  justify-content: center;
 
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+`;
+
+const Google = styled.button`
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 60%), inset 0 0 0 2px rgb(0 0 0 / 0%),
+    inset 0 0 0 1px rgb(0 0 0 / 0%);
+  vertical-align: middle;
+  z-index: 0;
+  transition-duration: 167px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6); 
+
+  &:hover {
+    background-color: rgba(207, 207, 207, 0.25);
+    color: rgba(0, 0, 0, 0.75);
+
+  }
+`;
 
 export default Login;
