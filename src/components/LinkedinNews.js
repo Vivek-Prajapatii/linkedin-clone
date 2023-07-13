@@ -11,7 +11,7 @@ const LinkedinNews = () => {
         <FeedList>
           <li>
             <a>
-              <Avatar />
+              <Avatar/>
             </a>
             <div>
               <span>#Linkedin</span>
@@ -20,7 +20,7 @@ const LinkedinNews = () => {
           </li>
           <li>
             <a>
-              <Avatar />
+              <Avatar/>
             </a>
             <div>
               <span>#Video</span>
