@@ -28,7 +28,12 @@ const LinkedinNews = () => {
             </div>
           </li>
         </FeedList>
+        <Recommendation>
+          View all recommendations
+          <img src="/images/right-icon.svg" />
+        </Recommendation>
       </FollowCard>
+      <BannerCard></BannerCard>
     </Container>
   );
 };
@@ -72,10 +77,10 @@ const FeedList = styled.ul`
       flex-direction: column;
     }
 
-    bottom {
+    button {
       background-color: transparent;
-      color: rgba(0,0,0,0.6);
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.6);
+      color: rgba(0, 0, 0, 0.6);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
       padding: 16px;
       align-items: center;
       border-radius: 15px;
@@ -93,6 +98,14 @@ const FeedList = styled.ul`
 
 const Avatar = styled.div`
   background-image: url(" ");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
 `;
+
+const Recommendation = styled.div``;
 
 export default LinkedinNews;
