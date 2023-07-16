@@ -17,17 +17,18 @@ const Home = () => {
 
 const Container = styled.div`
   padding-top: 52px;
-  max-width: 100%;
+  max-width: 80%;
 `;
 
 const Layout = styled.div`
   display: grid;
   grid-template-areas: "recent posts linkedinNews";
-  grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 6fr) minmax(200px, 2fr);
   column-gap: 25px;
   row-gap: 25px;
   grid-template-rows: auto;
   margin: 25px 0;
+  text-align: center;
 
   @media (max-width: 768px) {
     display: flex;
