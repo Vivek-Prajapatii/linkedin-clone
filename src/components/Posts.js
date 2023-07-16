@@ -43,7 +43,9 @@ const Posts = () => {
             </button>
           </SharedActor>
           <Description>
-            Description
+            Scarlet Witch (Wanda Maximoff) is a character appearing in American
+            comic books published by Marvel Comics. Created by writer Stan Lee
+            and artist Jack Kirby.
           </Description>
           <SharedImg>
             <a>
@@ -131,7 +133,7 @@ const ShareBox = styled(CommonCard)`
           margin: 0 px 0 -2px;
         }
         span {
-          color: #70b5f9;
+          /* color: #70b5f9; */
         }
       }
     }
@@ -162,9 +164,10 @@ const SharedActor = styled.div`
     img {
       width: 48px;
       height: 48px;
+      border-radius: 50%;
     }
 
-    &:div {
+    div {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -178,6 +181,7 @@ const SharedActor = styled.div`
         &:first-child {
           font-size: 14px;
           font-weight: 700;
+          padding-top: 3px;
           color: rgba(0, 0, 0, 1);
         }
 
