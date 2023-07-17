@@ -17,7 +17,10 @@ const Home = () => {
 
 const Container = styled.div`
   padding-top: 52px;
-  max-width: 80%;
+  /* max-width: 100%; */
+  width: 100vw;
+  justify-content: center;
+  text-align: center;
 `;
 
 const Layout = styled.div`
@@ -29,6 +32,9 @@ const Layout = styled.div`
   grid-template-rows: auto;
   margin: 25px 0;
   text-align: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1128px;
 
   @media (max-width: 768px) {
     display: flex;
