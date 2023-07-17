@@ -17,20 +17,20 @@ const Home = () => {
 
 const Container = styled.div`
   padding-top: 52px;
-  /* max-width: 100%; */
+  max-width: 100%;
   width: 100vw;
   justify-content: center;
-  text-align: center;
+  display: flex;
 `;
 
 const Layout = styled.div`
   display: grid;
   grid-template-areas: "recent posts linkedinNews";
-  grid-template-columns: minmax(0, 2fr) minmax(0, 6fr) minmax(200px, 2fr);
-  column-gap: 25px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 4fr) minmax(200px, 2fr);
+  column-gap: 20px;
   row-gap: 25px;
   grid-template-rows: auto;
-  margin: 25px 0;
+  margin: 15px 0;
   text-align: center;
   justify-content: center;
   text-align: center;
