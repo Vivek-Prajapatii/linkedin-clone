@@ -52,6 +52,16 @@ const Posts = () => {
               <img src="/images/wanda.jpg" />
             </a>
           </SharedImg>
+          <SocialCounts>
+            <li>
+              <button>
+                <img src="/images/like.png" />
+                <img src="/images/clap.png" />
+              </button>
+              <span>Ankur and 13 others</span>
+              <span>6 comments</span>
+            </li>
+          </SocialCounts>
         </Article>
       </div>
     </Container>
@@ -196,7 +206,7 @@ const SharedActor = styled.div`
   button {
     position: absolute;
     right: 12px;
-    top:10px;
+    top: 10px;
     background: transparent;
     border: none;
     outline: none;
@@ -211,24 +221,72 @@ const SharedActor = styled.div`
 const Description = styled.div`
   padding: 0 16px;
   overflow: hidden;
-  color: rgba(0,0,0,0.9);
+  color: rgba(0, 0, 0, 0.9);
   font-size: 14px;
   text-align: left;
 `;
 
 const SharedImg = styled.div`
-margin-top: 8px;
-width: 100%;
-display: block;
-position: relative;
-background-color: #f9fafb;
-
-img {
-  object-fit: contain;
+  margin-top: 8px;
   width: 100%;
-  height: 100%;
-}
+  display: block;
+  position: relative;
+  background-color: #f9fafb;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
+const SocialCounts = styled.div`
+  /* text-decoration: none; */
+  /* width: 20px; */
+  /* height: 20px; */
+
+  li {
+    text-decoration: none;
+    text-align: left;
+    list-style: none;
+    align-items: center;
+
+    button {
+      border: none;
+
+      img {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: lightgreen;
+
+        &:first-child {
+          background-color: lightblue;
+        }
+
+        &:nth-child(2) {
+          position: absolute;
+          left: 20px;
+          z-index: 1;
+        }
+      }
+    }
+
+    span {
+      font-size: 12px;
+      position: absolute;
+      bottom: 5px;
+
+      &:nth-child(2) {
+        left: 45px;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        right: 10px;
+      }
+    }
+  }
+`;
 
 export default Posts;
