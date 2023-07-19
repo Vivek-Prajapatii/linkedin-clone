@@ -62,6 +62,24 @@ const Posts = () => {
               <span>6 comments</span>
             </li>
           </SocialCounts>
+          <ReactionBar>
+            <button>
+              <img src="/images/like-icon.png" />
+              <span>Like</span>
+            </button>
+            <button>
+              <img src="/images/comment.png" />
+              <span>Comment</span>
+            </button>
+            <button>
+              <img src="/images/repost.png" />
+              <span>Repost</span>
+            </button>
+            <button>
+              <img src="/images/send.png" />
+              <span>Send</span>
+            </button>
+          </ReactionBar>
         </Article>
       </div>
     </Container>
@@ -241,9 +259,7 @@ const SharedImg = styled.div`
 `;
 
 const SocialCounts = styled.div`
-  /* text-decoration: none; */
-  /* width: 20px; */
-  /* height: 20px; */
+  border-bottom: 1px solid grey;
 
   li {
     text-decoration: none;
@@ -255,8 +271,8 @@ const SocialCounts = styled.div`
       border: none;
 
       img {
-        height: 20px;
-        width: 20px;
+        height: 15px;
+        width: 15px;
         border-radius: 50%;
         background-color: lightgreen;
 
@@ -266,25 +282,49 @@ const SocialCounts = styled.div`
 
         &:nth-child(2) {
           position: absolute;
-          left: 20px;
+          left: 15px;
           z-index: 1;
         }
       }
     }
 
     span {
-      font-size: 12px;
+      font-size: 11px;
       position: absolute;
-      bottom: 5px;
+      align-items: center;
+      margin-top: 2px;
 
       &:nth-child(2) {
-        left: 45px;
+        left: 40px;
       }
 
       &:nth-child(3) {
         position: absolute;
         right: 10px;
       }
+    }
+  }
+`;
+
+const ReactionBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    border: none;
+    background-color: white;
+    padding: 0px 10px;
+    margin: 8px 10px;
+    display: inline-flex;
+    align-items: center;
+
+    img {
+      max-width: 25px;
+      max-height: 25px;
+    }
+
+    span {
+      padding-left: 3px;
     }
   }
 `;
