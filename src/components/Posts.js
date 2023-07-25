@@ -86,7 +86,9 @@ const Posts = () => {
   );
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  max-width: 500px;
+`;
 
 const CommonCard = styled.div`
   text-align: center;
