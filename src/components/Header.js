@@ -111,12 +111,13 @@ const Search = styled.div`
 
   & > div {
     max-width: 280px;
+    display: flex;
     input {
       border: none;
       box-sizing: none;
       background-color: #eef3f8;
       border-radius: 2px;
-      width: 218px;
+      width: 15vw;
       padding: 0 8px 0 40px;
       color: rgba(0, 0, 0, 0.9);
       line-height: 1.75;
@@ -125,6 +126,14 @@ const Search = styled.div`
       height: 34px;
       border-color: #dce6f1;
       vertical-align: text-top;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & > div {
+      input {
+        width: 40vw;
+      }
     }
   }
 `;
@@ -144,7 +153,6 @@ const SearchIcon = styled.div`
 
 const Nav = styled.div`
   margin-left: auto;
-  display: block;
 
   @media (max-width: 768px) {
     position: fixed;
@@ -157,6 +165,7 @@ const Nav = styled.div`
 
 const NavListWrap = styled.ul`
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   list-style-type: none;
 
@@ -213,7 +222,7 @@ const NavList = styled.li`
   }
 `;
 
-const SignOut = styled.div` 
+const SignOut = styled.div`
   position: absolute;
   top: 45px;
   background: white;
@@ -243,19 +252,17 @@ const User = styled(NavList)`
     align-items: center;
   }
 
-  &:hover{
+  &:hover {
     ${SignOut} {
       align-items: center;
       display: flex;
       justify-content: center;
     }
   }
-
 `;
 
 const Work = styled(User)`
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 `;
-
 
 export default Header;
