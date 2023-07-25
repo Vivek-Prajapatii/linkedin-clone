@@ -309,11 +309,12 @@ const SocialCounts = styled.div`
 const ReactionBar = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0px 20px;
 
   button {
     border: none;
     background-color: white;
-    padding: 0px 10px;
+    /* padding: 0px 10px; */
     margin: 8px 10px;
     display: inline-flex;
     align-items: center;

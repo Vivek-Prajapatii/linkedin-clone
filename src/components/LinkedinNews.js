@@ -42,6 +42,12 @@ const LinkedinNews = () => {
 
 const Container = styled.div`
   grid-area: linkedinNews;
+
+  @media (max-width: 875px) {
+    display: none;
+    /* flex-direction: column; */
+    /* padding: 0 5px; */
+  }
 `;
 
 const FollowCard = styled.div`

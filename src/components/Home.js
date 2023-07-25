@@ -36,6 +36,11 @@ const Layout = styled.div`
   text-align: center;
   max-width: 1128px;
 
+  @media (max-width: 875px) {
+    grid-template-areas: "recent posts";
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 4fr);
+  }
+
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
