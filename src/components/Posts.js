@@ -33,9 +33,9 @@ const Posts = () => {
             <a>
               <img src="/images/user.svg" />
               <div>
-                <span>Title</span>
-                <span>Info</span>
-                <span>Date</span>
+                <span>Scarlet Witch</span>
+                <span>Actress</span>
+                <span>Promoted</span>
               </div>
             </a>
             <button>
@@ -173,7 +173,7 @@ const ShareBox = styled(CommonCard)`
 const Article = styled(CommonCard)`
   padding: 0;
   margin: 0 0 8px;
-  overflow: visible;
+  /* overflow: hidden; */
 `;
 
 const SharedActor = styled.div`
@@ -309,18 +309,27 @@ const SocialCounts = styled.div`
   }
 `;
 
-const ReactionBar = styled.div`
+const ReactionBar = styled(CommonCard)`
   display: flex;
+  direction: row;
   justify-content: space-between;
-  padding: 0px 20px;
+  width: inherit;
+  margin: 6px 10px;
+  border: none;
+  box-shadow: none;
 
   button {
     border: none;
     background-color: white;
-    /* padding: 0px 10px; */
-    margin: 8px 10px;
+    /* margin: 8px 10px; */
     display: inline-flex;
     align-items: center;
+    border-radius: 5px;
+    padding: 8px 15px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
 
     img {
       max-width: 25px;
