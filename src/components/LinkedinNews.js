@@ -14,7 +14,7 @@ const LinkedinNews = () => {
               <span>
                 <h5>Sugar substitutes in the spotlight</h5>
               </span>
-              <span>2 mins</span>
+              <span>2h ago</span>
             </div>
           </li>
           <li>
@@ -22,7 +22,7 @@ const LinkedinNews = () => {
               <span>
                 <h5>Sugar substitutes in the spotlight</h5>
               </span>
-              <span>2 mins</span>
+              <span>3d ago</span>
             </div>
           </li>
           <li>
@@ -30,7 +30,7 @@ const LinkedinNews = () => {
               <span>
                 <h5>Sugar substitutes in the spotlight</h5>
               </span>
-              <span>2 mins</span>
+              <span>6g ago</span>
             </div>
           </li>
           <li>
