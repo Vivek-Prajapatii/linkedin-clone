@@ -6,7 +6,7 @@ const Header = () => {
       <Content>
         <Logo>
           <a href="/home">
-            <img src="/images/home-logo.svg" />
+            <img src="/images/home-logo.svg" alt=""/>
           </a>
         </Logo>
         <Search>

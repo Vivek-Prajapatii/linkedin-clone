@@ -5,26 +5,48 @@ const LinkedinNews = () => {
     <Container>
       <FollowCard>
         <Title>
-          <h2>Add to your feed</h2>
+          <h2>LinkedIn News</h2>
           <img src="/images/feed-icon.svg" />
         </Title>
         <FeedList>
           <li>
-            <a>
-              <Avatar/>
-            </a>
             <div>
-              <span>#Linkedin</span>
-              <button>Follow</button>
+              <span>
+                <h5>Sugar substitutes in the spotlight</h5>
+              </span>
+              <span>2 mins</span>
             </div>
           </li>
           <li>
-            <a>
-              <Avatar/>
-            </a>
             <div>
-              <span>#Video</span>
-              <button>Follow</button>
+              <span>
+                <h5>Sugar substitutes in the spotlight</h5>
+              </span>
+              <span>2 mins</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span>
+                <h5>Sugar substitutes in the spotlight</h5>
+              </span>
+              <span>2 mins</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span>
+                <h5>Sugar substitutes in the spotlight</h5>
+              </span>
+              <span>2 mins</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <span>
+                <h5>Sugar substitutes in the spotlight</h5>
+              </span>
+              <span>2 mins</span>
             </div>
           </li>
         </FeedList>
@@ -33,9 +55,6 @@ const LinkedinNews = () => {
           <img src="/images/right-icon.svg" />
         </Recommendation>
       </FollowCard>
-      <BannerCard>
-        <img src="https://static-exp1.licdn.com/scds/common/u/images/promo/ads/li_evergreen_jobs_ad_300x250_v1.jpg" />
-      </BannerCard>
     </Container>
   );
 };
@@ -74,18 +93,29 @@ const Title = styled.div`
 const FeedList = styled.ul`
   margin-top: 16px;
   li {
-    display: flex;
+    /* display: flex; */
+    justify-content: left;
     align-items: center;
     margin: 12px 0;
     position: relative;
-    font-size: 14px;
+    line-height: 20px;
+    margin-left: 20px;
+    /* padding-left: 20px; */
 
-    & > div {
+    span {
       display: flex;
-      flex-direction: column;
+      justify-content: left;
+      font-size: 12px;
+      /* font-weight: 550; */
+      font-family: "sans";
     }
 
-    button {
+    /* & > div {
+      display: flex;
+      flex-direction: column;
+    } */
+
+    /* button {
       background-color: transparent;
       color: rgba(0, 0, 0, 0.6);
       box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
@@ -100,32 +130,32 @@ const FeedList = styled.ul`
       max-width: 480px;
       text-align: center;
       outline: none;
-    }
+    } */
   }
 `;
 
-const Avatar = styled.div`
-  background-image: url("/images/hashtag.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 48px;
-  height: 48px;
-  margin-right: 8px;
-`;
+// const Avatar = styled.div`
+//   background-image: url("/images/hashtag.svg");
+//   background-size: contain;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   width: 48px;
+//   height: 48px;
+//   margin-right: 8px;
+// `;
 
 const Recommendation = styled.a`
   color: #0a66c2;
-  display:flex;
+  display: flex;
   align-items: center;
   font-size: 14px;
 `;
 
-const BannerCard = styled.a`
-  img {
-    width: 100%;
-    height: 100%;
-  }
-`;
+// const BannerCard = styled.a`
+//   img {
+//     width: 100%;
+//     height: 100%;
+//   }
+// `;
 
 export default LinkedinNews;
