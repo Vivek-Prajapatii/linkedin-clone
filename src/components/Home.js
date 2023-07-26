@@ -26,7 +26,7 @@ const Container = styled.div`
 const Layout = styled.div`
   display: grid;
   grid-template-areas: "recent posts linkedinNews";
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 4fr) minmax(200px, 2fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 4fr) minmax(200px, 2.5fr);
   column-gap: 20px;
   row-gap: 25px;
   grid-template-rows: auto;

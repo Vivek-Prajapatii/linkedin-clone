@@ -242,7 +242,8 @@ const Description = styled.div`
   padding: 0 16px;
   overflow: hidden;
   color: rgba(0, 0, 0, 0.9);
-  font-size: 14px;
+  font-size: 12px;
+  font-family: 'sans';
   text-align: left;
 `;
 

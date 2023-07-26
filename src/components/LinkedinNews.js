@@ -6,54 +6,63 @@ const LinkedinNews = () => {
       <FollowCard>
         <Title>
           <h2>LinkedIn News</h2>
-          <img src="/images/feed-icon.svg" />
+          <img src="/images/feed-icon.svg" alt=""/>
         </Title>
         <FeedList>
-          <li>
-            <div>
-              <span>
-                <h5>Sugar substitutes in the spotlight</h5>
-              </span>
-              <span>2h ago</span>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span>
-                <h5>Sugar substitutes in the spotlight</h5>
-              </span>
-              <span>3d ago</span>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span>
-                <h5>Sugar substitutes in the spotlight</h5>
-              </span>
-              <span>6g ago</span>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span>
-                <h5>Sugar substitutes in the spotlight</h5>
-              </span>
-              <span>2 mins</span>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span>
-                <h5>Sugar substitutes in the spotlight</h5>
-              </span>
-              <span>2 mins</span>
-            </div>
-          </li>
+          <a>
+            <li>
+              <div>
+                <span>
+                  <h5>Sugar substitutes in the spotlight</h5>
+                </span>
+                <span>2h ago</span>
+              </div>
+            </li>
+          </a>
+          <a>
+            <li>
+              <div>
+                <span>
+                  <h5>Hiring drops at IT giants</h5>
+                </span>
+                <span>3d ago</span>
+              </div>
+            </li>
+          </a>
+          <a>
+            <li>
+              <div>
+                <span>
+                  <h5>Credit card defaults on rise</h5>
+                </span>
+                <span>6h ago</span>
+              </div>
+            </li>
+          </a>
+          <a>
+            <li>
+              <div>
+                <span>
+                  <h5>prioritising employee well-being</h5>
+                </span>
+                <span>7w ago</span>
+              </div>
+            </li>
+          </a>
+          <a>
+            <li>
+              <div>
+                <span>
+                  <h5>Fidelity International to hire 800</h5>
+                </span>
+                <span>2m ago</span>
+              </div>
+            </li>
+          </a>
         </FeedList>
-        <Recommendation>
-          View all recommendations
-          <img src="/images/right-icon.svg" />
-        </Recommendation>
+        <ShowMore>
+          <button>Show more</button>
+        </ShowMore>
       </FollowCard>
     </Container>
   );
@@ -78,7 +87,7 @@ const FollowCard = styled.div`
   position: relative;
   border: none;
   box-shadow: 0 0 0 1px rgb(0 0 0 /15%), 0 0 0 rgb(0 0 0 / 20%);
-  padding: 12px;
+  padding: 12px 0px;
 `;
 
 const Title = styled.div`
@@ -86,76 +95,70 @@ const Title = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
-  width: 100%;
+  width: 90%;
   color: rgba(0, 0, 0, 0.6);
+  padding: 0px 12px;
+  font-family: "sans";
 `;
 
 const FeedList = styled.ul`
   margin-top: 16px;
-  li {
-    /* display: flex; */
-    justify-content: left;
-    align-items: center;
-    margin: 12px 0;
-    position: relative;
-    line-height: 20px;
-    margin-left: 20px;
-    /* padding-left: 20px; */
+  padding: 0px;
 
-    span {
-      display: flex;
-      justify-content: left;
-      font-size: 12px;
-      /* font-weight: 550; */
-      font-family: "sans";
+  a {
+    display: flex;
+    padding-left: 15px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.08);
     }
-
-    /* & > div {
-      display: flex;
-      flex-direction: column;
-    } */
-
-    /* button {
-      background-color: transparent;
-      color: rgba(0, 0, 0, 0.6);
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
-      padding: 16px;
+    & > li {
+      justify-content: left;
       align-items: center;
-      border-radius: 15px;
-      box-sizing: border-box;
-      font-weight: 600;
-      display: inline-flex;
-      justify-content: center;
-      max-height: 32px;
-      max-width: 480px;
-      text-align: center;
-      outline: none;
-    } */
+      margin: 5px 0;
+      position: relative;
+      margin-left: 20px;
+      padding: 0px 10px;
+
+      div {
+        span {
+          display: flex;
+          justify-content: left;
+          font-family: "sans";
+          font-size: 11px;
+          color: grey;
+          line-height: 17px;
+
+          :first-child {
+            color: #424744;
+            font-size: 12px;
+          }
+        }
+      }
+    }
   }
 `;
 
-// const Avatar = styled.div`
-//   background-image: url("/images/hashtag.svg");
-//   background-size: contain;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   width: 48px;
-//   height: 48px;
-//   margin-right: 8px;
-// `;
-
-const Recommendation = styled.a`
-  color: #0a66c2;
+const ShowMore = styled.a`
   display: flex;
-  align-items: center;
-  font-size: 14px;
-`;
+  padding-left: 30px;
+  padding-top: 10px;
 
-// const BannerCard = styled.a`
-//   img {
-//     width: 100%;
-//     height: 100%;
-//   }
-// `;
+  & > button {
+    height: 25px;
+    width: 100px;
+    font-size: 13px;
+    font-family: "sans";
+    font-weight: 550;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    border: none;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+  }
+`;
 
 export default LinkedinNews;
