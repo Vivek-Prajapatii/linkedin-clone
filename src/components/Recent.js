@@ -32,6 +32,9 @@ const Recent = () => {
       </ArtCard>
       <CommunityCard>
         <a>
+          <span>Recent</span>
+        </a>
+        <a>
           <span>Groups</span>
         </a>
         <a>
@@ -41,7 +44,7 @@ const Recent = () => {
           </span>
         </a>
         <a>
-          <span>Follow hashtags</span>
+          <span>Followed hashtags</span>
         </a>
         <a>
           <span>Discover more</span>
@@ -184,16 +187,25 @@ const CommunityCard = styled(ArtCard)`
   a {
     color: black;
     padding: 4px 12px 4px 12px;
-    font-size: 12px;
+    font-size: 11px;
+    color: #0a66c2;
+    font-weight: 550;
+    line-height: 20px;
 
     &:hover {
-      color: #0a66c2;
+      /* color: #0a66c2;*/
+      text-decoration: underline ;
     }
 
     span {
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    &:first-child {
+      text-decoration: none;
+      color: rgba(0,0,0,1)
     }
 
     &:last-child {
