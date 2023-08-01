@@ -40,6 +40,11 @@ const Recent = () => {
         </a>
         <a>
           <span>Groups</span>
+          <div>
+            <span>React Developers-ReactJS</span>
+            <span>JavaScript</span>
+            <span>See all</span>
+          </div>
         </a>
         <a>
           <span>
@@ -190,15 +195,28 @@ const CommunityCard = styled(ArtCard)`
 
   a {
     color: black;
-    padding: 4px 12px 4px 12px;
+    padding: 4px 12px;
     font-size: 11px;
     color: #0a66c2;
     font-weight: 550;
-    line-height: 20px;
+    line-height: 25px;
+    text-decoration: none;
+
+    &:has(div:hover) {
+      padding: 4px 0px;
+      text-decoration: none;
+
+      span {
+        padding: 0px 12px;
+        text-decoration: none;
+      }
+    }
 
     &:hover {
-      /* color: #0a66c2;*/
-      text-decoration: underline ;
+      span {
+        text-decoration: none;
+      }
+      text-decoration: underline;
     }
 
     span {
@@ -207,9 +225,22 @@ const CommunityCard = styled(ArtCard)`
       justify-content: space-between;
     }
 
+    div {
+      span {
+        color: rgba(0, 0, 0, 0.8);
+        line-height: 20px;
+        font-size: 10px;
+        font-weight: 550;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.07);
+        }
+      }
+    }
+
     &:first-child {
       text-decoration: none;
-      color: rgba(0,0,0,1)
+      color: rgba(0, 0, 0, 1);
     }
 
     &:last-child {
