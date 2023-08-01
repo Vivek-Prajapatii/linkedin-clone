@@ -33,6 +33,10 @@ const Recent = () => {
       <CommunityCard>
         <a>
           <span>Recent</span>
+          <div>
+            <span>GitHub- Why What and How</span>
+            <span>Google Cloud Security Summit</span>
+          </div>
         </a>
         <a>
           <span>Groups</span>
