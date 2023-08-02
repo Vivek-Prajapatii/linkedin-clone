@@ -1,16 +1,25 @@
 import styled from "styled-components";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
+import Home from "./Home";
 
-const Login = (props) => {
+const Login = () => {
+  const onSignIn = () => {
+    return (
+      <>
+        <Home />;
+      </>
+    );
+  };
+
   return (
     <Container>
       <Nav>
         <a href="/">
-          <img src="./images/login-logo.svg"></img>
+          <img src="./images/login-logo.svg" alt=""></img>
         </a>
         <div>
-          <Join>Join Now</Join>
-          <SignIn>Sign in</SignIn>
+          <Join onClick={onSignIn}>Join Now</Join>
+          <SignIn onClick={onSignIn}>Sign in</SignIn>
         </div>
       </Nav>
       <Section>
@@ -20,7 +29,7 @@ const Login = (props) => {
         </Hero>
         <Form>
           <Google>
-            <img src="/images/google.svg" />
+            <img src="/images/google.svg" alt="" />
             Sign in with Google
           </Google>
         </Form>
@@ -176,10 +185,14 @@ const Google = styled.button`
     color: rgba(0, 0, 0, 0.75);
   }
 `;
-const mapStateToProps = (state) => {
-  return {};
-};
 
-const mapDispatchToProps = (dispatch) => {};
+// const mapStateToProps = (state) => {
+//   return {};
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+// const mapDispatchToProps = (dispatch) => {
+//   return {};
+// };
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default Login;
