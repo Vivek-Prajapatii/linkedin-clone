@@ -1,41 +1,45 @@
 import styled from "styled-components";
 // import { connect } from "react-redux";
 import Home from "./Home";
+import { useState } from "react";
 
 const Login = () => {
-  const onSignIn = () => {
-    return (
-      <>
-        <Home />;
-      </>
-    );
-  };
+  const [onClicked, setOnClicked] = useState(false);
 
-  return (
-    <Container>
-      <Nav>
-        <a href="/">
-          <img src="./images/login-logo.svg" alt=""></img>
-        </a>
-        <div>
-          <Join onClick={onSignIn}>Join Now</Join>
-          <SignIn onClick={onSignIn}>Sign in</SignIn>
-        </div>
-      </Nav>
-      <Section>
-        <Hero>
-          <h1>Welcome to your professional community</h1>
-          <img src="/images/login-hero.svg" alt="img" />
-        </Hero>
-        <Form>
-          <Google>
-            <img src="/images/google.svg" alt="" />
-            Sign in with Google
-          </Google>
-        </Form>
-      </Section>
-    </Container>
-  );
+  if (onClicked) {
+    return <Home />;
+  } else
+    return (
+      <Container>
+        <Nav>
+          <a href="/">
+            <img src="./images/login-logo.svg" alt=""></img>
+          </a>
+          <div>
+            <Join
+              onClick={() => {
+                setOnClicked(true);
+              }}
+            >
+              Join Now
+            </Join>
+            <SignIn>Sign in</SignIn>
+          </div>
+        </Nav>
+        <Section>
+          <Hero>
+            <h1>Welcome to your professional community</h1>
+            <img src="/images/login-hero.svg" alt="img" />
+          </Hero>
+          <Form>
+            <Google>
+              <img src="/images/google.svg" alt="" />
+              Sign in with Google
+            </Google>
+          </Form>
+        </Section>
+      </Container>
+    );
 };
 
 const Container = styled.div`

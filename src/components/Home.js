@@ -2,10 +2,12 @@ import { styled } from "styled-components";
 import Posts from "./Posts";
 import Recent from "./Recent";
 import LinkedinNews from "./LinkedinNews";
+import Header from "./Header";
 
 const Home = () => {
   return (
     <Container>
+      <Header />
       <Layout>
         <Recent />
         <Posts />
