@@ -196,9 +196,9 @@ const CommunityCard = styled(ArtCard)`
   a {
     color: black;
     padding: 4px 12px;
-    font-size: 11px;
+    font-size: 10px;
     color: #0a66c2;
-    font-weight: 550;
+    font-weight: 900!important;
     line-height: 25px;
     text-decoration: none;
 
@@ -224,11 +224,10 @@ const CommunityCard = styled(ArtCard)`
 
     div {
       span {
-        color: rgba(0, 0, 0, 0.8);
+        color: rgba(0, 0, 0, 0.6);
         line-height: 20px;
         font-size: 10px;
-        font-weight: 550;
-
+        font-weight: 940!important;
         &:hover {
           background-color: rgba(0, 0, 0, 0.07);
         }
