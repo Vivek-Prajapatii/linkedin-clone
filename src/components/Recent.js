@@ -212,17 +212,14 @@ const CommunityCard = styled(ArtCard)`
       }
     }
 
-    &:hover {
-      span {
-        text-decoration: none;
-      }
-      text-decoration: underline;
-    }
-
     span {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     div {
