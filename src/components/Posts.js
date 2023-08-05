@@ -149,6 +149,10 @@ const ShareBox = styled(CommonCard)`
         border-radius: 35px;
         background-color: white;
         text-align: left;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
       }
     }
 
@@ -159,11 +163,16 @@ const ShareBox = styled(CommonCard)`
       padding-bottom: 4px;
 
       button {
+
+        border-radius: 5px;
+        padding: 10px 15px;
+        
         img {
           margin: 0 px 0 -2px;
         }
-        span {
-          /* color: #70b5f9; */
+        
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.08);
         }
       }
     }
