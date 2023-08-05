@@ -87,7 +87,7 @@ const Posts = () => {
 };
 
 const Container = styled.div`
-  max-width: 500px;
+  max-width: 525px;
 `;
 
 const CommonCard = styled.div`
@@ -166,7 +166,7 @@ const ShareBox = styled(CommonCard)`
 
         border-radius: 5px;
         padding: 10px 15px;
-        
+
         img {
           margin: 0 px 0 -2px;
         }

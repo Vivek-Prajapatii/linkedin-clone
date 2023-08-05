@@ -3,10 +3,10 @@ import { styled } from "styled-components";
 const LinkedinNews = () => {
   return (
     <Container>
-      <FollowCard>
+      <News>
         <Title>
           <h2>LinkedIn News</h2>
-          <img src="/images/feed-icon.svg" alt=""/>
+          <img src="/images/feed-icon.svg" alt="" />
         </Title>
         <FeedList>
           <a>
@@ -63,14 +63,63 @@ const LinkedinNews = () => {
         <ShowMore>
           <button>Show more</button>
         </ShowMore>
-      </FollowCard>
+      </News>
+      <QuickLinks>
+        <div>
+          <Links>
+            <a>
+              <span>About</span>
+            </a>
+          </Links>
+          <Links>
+            <a>
+              <span>Accessibilty</span>
+            </a>
+          </Links>
+          <Links>
+            <a>
+              <span>Help center</span>
+            </a>
+          </Links>
+          <Links>
+            <a>
+              <span>Privacy & Terms</span>
+            </a>
+          </Links>
+          <Links>
+            <a>
+              <span>Ad choices</span>
+            </a>
+          </Links>
+          <Links>
+            <a>
+              <span>Advertising</span>
+            </a>
+          </Links>
+          <Links>
+            <a>
+              <span>Business Services</span>
+            </a>
+          </Links>
+          <Links>
+            <a>
+              <span>Get the LinkedIn app</span>
+            </a>
+          </Links>
+          <Links>
+            <a>
+              <span>More</span>
+            </a>
+          </Links>
+        </div>
+      </QuickLinks>
     </Container>
   );
 };
 
 const Container = styled.div`
   grid-area: linkedinNews;
-
+  width: 290px;
   @media (max-width: 875px) {
     display: none;
     /* flex-direction: column; */
@@ -78,7 +127,7 @@ const Container = styled.div`
   }
 `;
 
-const FollowCard = styled.div`
+const News = styled.div`
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
@@ -157,6 +206,36 @@ const ShowMore = styled.a`
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.08);
+    }
+  }
+`;
+
+const QuickLinks = styled.div`
+  border: none;
+  background-color: rgba(0, 0, 0, 0.001);
+  box-shadow: 0 0 0 0;
+  padding: 15px 20px;
+
+  div {
+    display: flexbox;
+    text-align: center;
+    font-size: 10px;
+    font-family: "sans";
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+  }
+`;
+
+const Links = styled.a`
+  & > a {
+    padding: 05px 13px;
+    line-height: 20px;
+
+    &:hover {
+      span {
+        color: blue;
+        text-decoration: underline;
+      }
     }
   }
 `;
