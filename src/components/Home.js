@@ -38,7 +38,7 @@ const Layout = styled.div`
   text-align: center;
   max-width: 1000px;
 
-  @media (max-width: 875px) {
+  @media (max-width: 920px) {
     grid-template-areas: "recent posts";
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 4fr);
   }

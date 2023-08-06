@@ -113,6 +113,10 @@ const LinkedinNews = () => {
           </Links>
         </div>
       </QuickLinks>
+      <CopyRight>
+        <img src="./images/login-logo.svg" alt="" />
+        <span>LinkedIn Corporation © 2023</span>
+      </CopyRight>
     </Container>
   );
 };
@@ -120,10 +124,8 @@ const LinkedinNews = () => {
 const Container = styled.div`
   grid-area: linkedinNews;
   width: 290px;
-  @media (max-width: 875px) {
+  @media (max-width: 920px) {
     display: none;
-    /* flex-direction: column; */
-    /* padding: 0 5px; */
   }
 `;
 
@@ -217,12 +219,15 @@ const QuickLinks = styled.div`
   padding: 15px 20px;
 
   div {
-    display: flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     font-size: 10px;
     font-family: "sans";
     color: rgba(0, 0, 0, 0.6);
     font-weight: 500;
+    word-break: keep-all;
   }
 `;
 
@@ -230,13 +235,32 @@ const Links = styled.a`
   & > a {
     padding: 05px 13px;
     line-height: 20px;
-
     &:hover {
       span {
         color: blue;
         text-decoration: underline;
       }
     }
+  }
+`;
+
+const CopyRight = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+height: 15px;
+
+  img {
+    width: 55px;
+    height: 15px;
+    padding: 0;
+  }
+
+  span {
+    font-family: 'sans';
+    font-size: 10px;
+    margin-left: 5px;
+
   }
 `;
 

@@ -6,7 +6,7 @@ const Header = () => {
       <Content>
         <Logo>
           <a>
-            <img src="/images/home-logo.svg" alt=""/>
+            <img src="/images/home-logo.svg" alt="" />
           </a>
         </Logo>
         <Search>
@@ -67,9 +67,12 @@ const Header = () => {
               <a>
                 <img src="/images/nav-work.svg" />
                 <span>
-                  Work
+                  For Business
                   <img src="/images/down-icon.svg" />
                 </span>
+              </a>
+              <a>
+                <span>Try Premium for free</span>
               </a>
             </Work>
           </NavListWrap>
@@ -85,7 +88,7 @@ const Container = styled.div`
   left: 0;
   padding: 2px 2px;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 0;
   z-index: 100;
 `;
@@ -95,7 +98,7 @@ const Content = styled.div`
   align-items: center;
   margin: 0 auto;
   min-height: 100%;
-  max-width: 1128px;
+  max-width: 1000px;
 `;
 
 const Logo = styled.span`
@@ -132,7 +135,7 @@ const Search = styled.div`
   @media (max-width: 768px) {
     & > div {
       input {
-        width: 40vw;
+        width: 50vw;
       }
     }
   }
@@ -154,7 +157,7 @@ const SearchIcon = styled.div`
 const Nav = styled.div`
   margin-left: auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: 920px) {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -192,7 +195,8 @@ const NavList = styled.li`
     background: transparent;
     display: flex;
     flex-direction: column;
-    font-size: 12px;
+    font-size: 10px;
+    font-family: "sans";
     font-weight: 400;
     justify-content: center;
     line-height: 1.5;
@@ -261,8 +265,45 @@ const User = styled(NavList)`
   }
 `;
 
-const Work = styled(User)`
+const Work = styled.div`
   border-left: 1px solid rgba(0, 0, 0, 0.08);
+  padding-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-family: "sans";
+    color: rgba(0, 0, 0, 0.6);
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+
+    :last-child {
+      img {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+        &:last-child {
+      text-decoration: underline;
+      color: goldenrod;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.9);
+    }
+  }
 `;
 
 export default Header;
