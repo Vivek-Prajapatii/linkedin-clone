@@ -23,7 +23,13 @@ const Login = () => {
             >
               Join Now
             </Join>
-            <SignIn>Sign in</SignIn>
+            <SignIn
+              onClick={() => {
+                setOnClicked(true);
+              }}
+            >
+              Sign in
+            </SignIn>
           </div>
         </Nav>
         <Section>
@@ -33,7 +39,13 @@ const Login = () => {
           </Hero>
           <Form>
             <Google>
-              <img src="/images/google.svg" alt="" />
+              <img
+                src="/images/google.svg"
+                alt=""
+                onClick={() => {
+                  setOnClicked(true);
+                }}
+              />
               Sign in with Google
             </Google>
           </Form>
